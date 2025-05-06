@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+#norabel {
+  color: rgb(245, 38, 183);
+}
+
+#benicio {
+  color: rgb(155, 81, 31);
+}
+
+#fernando {
+  color: rgb(129, 20, 255);
+}
+
+
+body {
+  background-color: #000;   
+  color: white;
+  font-family: 'Courier New', Courier, monospace;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+img {
+height: 48px;
+aspect-ratio: 1.1;
+}
+
+h1 {
+    padding-left: 20px;
+    font-size: 20px
+}
+
+a {
+  color: rgb(129, 20, 255);
+  font-weight: bold;
+}
+
+header {
+  padding: 10px 20px;
+  background-color: #000;
+  border-bottom: 8px solid rgb(206, 206, 206);
+  text-align: center;
+  font-size: 2rem;
+  display: flex;
+  flex-direction: row;
+  height: 80px;
+  align-items: center;
+}
+
+.container {
+  display: flex;
+  flex: 1;
+  height: 100%;
+  overflow: hidden;
+}
+
+.mensagens-lista {
+  width: 20%;
+  border-right: 8px solid rgb(206, 206, 206);
+  background-color: #000;
+  overflow-y: auto;
+}
+
+.mensagens-lista ul {
+  list-style: none;
+}
+
+.mensagens-lista li {
+  padding: 30px;
+  cursor: pointer;
+  border: 2px solid;
+  margin: 12px;
+}
+
+.mensagens-lista li:hover {
+  background-color: #222;
+}
+
+.mensagem-detalhe {
+  width: 80%;
+  padding: 20px;
+  overflow-y: auto;
+}
+
+.mensagem h2 {
+  margin-bottom: 10px;
+}
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .mensagens-lista {
+    width: 100%;
+    height: auto;
+    border-right: none;
+    border-bottom: 4px solid rgb(206, 206, 206);
+  }
+
+  .mensagem-detalhe {
+    width: 100%;
+    padding: 20px;
+  }
+
+  .mensagens-lista li {
+    padding: 20px;
+    font-size: 1rem;
+  }
+
+  header {
+    font-size: 1.5rem;
+  }
+}
