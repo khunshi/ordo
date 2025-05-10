@@ -60,7 +60,7 @@
       // 4. Salvar no Firebase na pasta correspondente ao destinatário
       db.ref(`mensagens/${destinatario}`).push(novaMensagem)
         .then(() => {
-          alert("Mensagem enviada!");
+          alert("Sucessu");
           document.getElementById("formMensagem").reset();
         })
         .catch((error) => {
