@@ -55,6 +55,26 @@ header {
   align-items: center;
 }
 
+button {
+  background-color: #fff;
+  cursor: pointer;
+  border: 2px solid;
+  border-color: white;
+
+  color: black;
+  padding: 12px;
+  width: 100%;
+  font-weight: bold;
+}
+
+button:hover {
+  background-color: #dedede;
+}
+
+svg {
+  width: 24px;
+}
+
 .container {
   display: flex;
   flex: 1;
@@ -69,15 +89,24 @@ header {
   overflow-y: auto;
 }
 
+ul {
+  display: flex;
+  flex-direction: column-reverse;
+  padding: 0;
+  margin: 0;
+}
+
+
 .mensagens-lista ul {
   list-style: none;
+  padding: 12px;
 }
 
 .mensagens-lista li {
   padding: 30px;
   cursor: pointer;
   border: 2px solid;
-  margin: 12px;
+  margin: 6px 0px;
 }
 
 .mensagens-lista li:hover {

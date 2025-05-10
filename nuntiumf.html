@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <title>Nuntium</title>
+  <link rel="stylesheet" href="stylesend.css">
+  <style>
+    body { font-family: sans-serif; padding: 2rem; }
+    form { max-width: 400px; margin: auto; display: flex; flex-direction: column; gap: 1rem; }
+    textarea, select, button { font-size: 1rem; padding: 0.5rem;}
+    .mensagem-sucesso {
+      display: none;
+      color: white;
+      text-align: center;
+      margin-top: 2rem;
+      font-family: 'Courier New', Courier, monospace;
+    }
+  </style>
+</head>
+<body>
+  <img src="logo.png" style="filter: invert(100%);">
+  <form id="formulario">
+    <input type="hidden" name="_captcha" value="false">
+    <input type="hidden" name="_subject" value="Nova mensagem do RPG!">
+
+    <label for="destinatario">Ad recipiendum</label>
+    <select name="Destinatário" id="destinatario" required>
+      <option value="" disabled selected>?</option>
+      <option value="M">M</option>
+      <option value="Benicio">Benício</option>
+      <option value="Norabel">Norabel</option>
+      <option value="Samuel">Samuel</option>
+    </select>
+
+    <label for="mensagem">Nuntium</label>
+    <textarea name="Mensagem" id="mensagem" rows="5" required placeholder=""></textarea>
+
+    <button type="submit">Mitte</button>
+  </form>
+
+  <div class="mensagem-sucesso" id="mensagem-sucesso">Successu.</div>
+
+  <script>
+    const form = document.getElementById('formulario');
+    const sucesso = document.getElementById('mensagem-sucesso');
+
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+
+      const dados = new FormData(form);
+      dados.append('_captcha', 'false');
+      dados.append('_subject', 'Nova mensagem do Fernando!');
+      
+      try {
+        const resposta = await fetch('https://formsubmit.co/ajax/ordorealitas1935@gmail.com', {
+          method: 'POST',
+          body: dados,
+        });
+
+        if (resposta.ok) {
+          form.reset();
+          sucesso.style.display = 'block';
+        } else {
+          alert('Error.');
+        }
+      } catch (erro) {
+        alert('Error.');
+      }
+    });
+  </script>
+</body>
+</html>
