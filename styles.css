@@ -56,15 +56,15 @@ header {
 }
 
 button {
-  background-color: #fff;
-  cursor: pointer;
-  border: 2px solid;
-  border-color: white;
-
-  color: black;
-  padding: 12px;
-  width: 100%;
+  background-color: white;
+  font-family: 'Courier New', Courier, monospace;
   font-weight: bold;
+  padding: 12px;
+  border: 2px solid;
+  margin: 12px;
+  height: 56px;
+  color: #000;
+
 }
 
 button:hover {
@@ -83,7 +83,6 @@ svg {
 }
 
 .mensagens-lista {
-  width: 20%;
   border-right: 8px solid rgb(206, 206, 206);
   background-color: #000;
   overflow-y: auto;
@@ -92,24 +91,30 @@ svg {
 ul {
   display: flex;
   flex-direction: column-reverse;
-  padding: 0;
+  padding: 12px 12px;
   margin: 0;
 }
 
+aside {
+  border-right: 8px solid;
+  display: flex;
+  flex-direction: column;
+  min-width: 20%;
+}
 
-.mensagens-lista ul {
+ul > li {
   list-style: none;
   padding: 12px;
 }
 
-.mensagens-lista li {
+ul > li {
   padding: 30px;
   cursor: pointer;
   border: 2px solid;
   margin: 6px 0px;
 }
 
-.mensagens-lista li:hover {
+ul > li:hover {
   background-color: #222;
 }
 
@@ -119,14 +124,31 @@ ul {
   overflow-y: auto;
 }
 
+.mensagem {
+  padding: 24px;
+}
+
 .mensagem h2 {
   margin-bottom: 10px;
 }
 
+.mensagem p {
+  margin-top: 24px;
+}
+
 @media (max-width: 768px) {
+  
   .container {
+    display: flex;
     flex-direction: column;
-    height: auto;
+  }
+
+  aside {
+    width: 100%;
+    border-right: none;
+    height: 30vh;
+    overflow: scroll;
+    border-bottom: 8px solid;
   }
 
   .mensagens-lista {

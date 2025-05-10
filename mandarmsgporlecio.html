@@ -14,10 +14,9 @@
   <form id="formMensagem">
     <label for="destinatario">Ad quem</label>
     <select id="destinatario">
-      <option value="lecio">???</option>
-      <option value="benicio">Benício</option>
       <option value="norabel">Norabel</option>
-      <option value="samuel">Samuel</option>
+      <option value="benicio">Benício</option>
+      <option value="fernando">Fernando</option>
     </select>
 
     <label for="mensagem">Nuntium</label>
@@ -52,7 +51,7 @@
       if (!texto.trim()) return alert("Escreva uma mensagem.");
 
       const novaMensagem = {
-        titulo: "Fernando", 
+        titulo: "???", 
         conteudo: texto,
         timestamp: Date.now()
       };

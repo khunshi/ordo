@@ -12,6 +12,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
 }
 
 img {
@@ -27,6 +28,7 @@ form {
 
 label {
     font-family: 'Courier New', Courier, monospace;
+    margin-bottom: 0.5em;
 }
 
 select {
@@ -35,7 +37,13 @@ select {
     font-family: 'Courier New', Courier, monospace;
     border: 2px solid;
     font-weight: bold;
-    margin-bottom: 1em;
+    margin-bottom: 2em;
+    height: 3em;
+}
+
+select:focus {
+    border: 2px solid;
+    outline: none;
 }
 
 textarea {
@@ -44,6 +52,7 @@ textarea {
     resize: none;
     border: 2px solid;
     scrollbar-color: #3a3a3a #111;
+    padding: 12px;
 }
 
 textarea:focus {
@@ -72,6 +81,6 @@ button {
 
   @media (max-width: 480px) {
     form {
-        width: 98%;
+        width: 92%;
     }
   }
